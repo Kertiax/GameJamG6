@@ -306,6 +306,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443355249}
+  - component: {fileID: 443355251}
+  - component: {fileID: 443355250}
   m_Layer: 0
   m_Name: FOOD
   m_TagString: Untagged
@@ -328,6 +330,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443355250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443355248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3ccf9bb9482a44a9a9e4f7cabc7663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodPrefabs:
+  - {fileID: 3080911419516523559, guid: 4e82853e23eaf644fbeb83934fc5f78f, type: 3}
+  - {fileID: 9146241312807470097, guid: cd658962102bf834a8be169fc4970f3a, type: 3}
+  - {fileID: 3229312922108426283, guid: 52bd09ffd0a4d23449409ebbc601170c, type: 3}
+  spawnInterval: 5
+  spawnRadius: 5
+  desiredZPosition: 3.8
+  foodLifetime: 10
+  spawnHeight: 20
+--- !u!114 &443355251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443355248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c68402f38697a4c8560f1f0a4e2523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodType: 0
+  growthAmount: 1
+  fallSpeed: 2
 --- !u!1 &472898742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1531,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1830298697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554082527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920e093d60874174daf6c20a2ce1dbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  maxYPosition: 5
+  minYPosition: -5
+  maxGrowth: 5
+  growthRate: 1
+  shrinkRate: 0.5
+  timeToStarve: 10
+  fishPrefabs:
+  - {fileID: 1085185261528838581, guid: ea74dea531d989c478a4e974d921cadd, type: 3}
+  childSpawnPoints: []
 --- !u!1001 &1887846892
 PrefabInstance:
   m_ObjectHideFlags: 0
