@@ -342,14 +342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodPrefabs:
-  - {fileID: 3080911419516523559, guid: 4e82853e23eaf644fbeb83934fc5f78f, type: 3}
-  - {fileID: 9146241312807470097, guid: cd658962102bf834a8be169fc4970f3a, type: 3}
-  - {fileID: 3229312922108426283, guid: 52bd09ffd0a4d23449409ebbc601170c, type: 3}
+  - {fileID: 7203397206375316406, guid: c9c477e02a7ec7c4385317d170d99350, type: 3}
+  - {fileID: 6708469983465803918, guid: 7ec167db780aedb48bcabfcb9e8b3f9a, type: 3}
+  - {fileID: 9053861883953509992, guid: 842d1c13a9765304a9b6a16cd40272ff, type: 3}
   spawnInterval: 2
   spawnRadius: 2
   desiredZPosition: 14
   foodLifetime: 10
-  spawnHeight: 5
+  spawnHeight: 10
 --- !u!114 &443355251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: a74ed1990ef183d4191afee5d003ae18, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.57
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: a74ed1990ef183d4191afee5d003ae18, type: 3}
       propertyPath: m_LocalPosition.y

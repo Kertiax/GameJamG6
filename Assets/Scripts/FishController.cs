@@ -47,7 +47,7 @@ public class FishController : MonoBehaviour
             Vector3 newPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
             newPosition.y = Mathf.Clamp(newPosition.y, minYPosition, maxYPosition);
             transform.position = Vector3.Lerp(transform.position, newPosition, 0.5f);
-            playerSound.PlayOneShot(swimSound, 1.0f);
+           
         }
     }
 
