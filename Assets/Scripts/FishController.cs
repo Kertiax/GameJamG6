@@ -12,6 +12,10 @@ public class FishController : MonoBehaviour
     public float timeToStarve = 10f;
     private float currentGrowth = 0f;
     private float lastMealTime;
+    private AudioSource playerSound;
+
+    public AudioClip swimSound;
+    public AudioClip soundThrow;
 
     public GameObject[] fishPrefabs; // Lista de prefabs de peces
     private int childCount = 0;
@@ -21,6 +25,7 @@ public class FishController : MonoBehaviour
     private void Start()
     {
         lastMealTime = Time.time;
+        playerSound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -42,6 +47,7 @@ public class FishController : MonoBehaviour
             Vector3 newPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
             newPosition.y = Mathf.Clamp(newPosition.y, minYPosition, maxYPosition);
             transform.position = Vector3.Lerp(transform.position, newPosition, 0.5f);
+            playerSound.PlayOneShot(swimSound, 1.0f);
         }
     }
 
