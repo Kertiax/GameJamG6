@@ -3,6 +3,7 @@ using UnityEngine;
 public class FishController : MonoBehaviour
 {
     public GameObject[] fishPrefabs; // Lista de prefabs de peces
+    public GameObject gOpanel;
     private int childCount = 0;
     public Transform[] childSpawnPoints; // Nuevos: Puntos de spawn para las crías
     public float moveSpeed;
@@ -95,6 +96,10 @@ public class FishController : MonoBehaviour
             Shrink();
             
         }
+        else if (currentGrowth <= 0) // Si el tiempo de inanición alcanza 0, activa el game over
+        {
+            
+        }
     }
 
     private void SpawnChild()
@@ -121,4 +126,7 @@ public class FishController : MonoBehaviour
         }
     }
 
+  
+
+   
 }
