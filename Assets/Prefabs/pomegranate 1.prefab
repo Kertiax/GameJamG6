@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7396382944955258813}
   - component: {fileID: 8170847729697835837}
   - component: {fileID: 8170847729697835834}
+  - component: {fileID: 1927599143830929558}
   m_Layer: 0
   m_Name: pomegranate 1
   m_TagString: Untagged
@@ -109,8 +110,23 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9053861883953509992}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.006290188
   m_Center: {x: 0.00022016406, y: 0, z: 0}
+--- !u!114 &1927599143830929558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053861883953509992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c68402f38697a4c8560f1f0a4e2523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodType: 1
+  growthAmount: 1
+  fallSpeed: 2

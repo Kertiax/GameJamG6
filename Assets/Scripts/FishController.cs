@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float maxYPosition = 5f;
-    public float minYPosition = -5f;
+    public float moveSpeed;
+    public float maxYPosition;
+    public float minYPosition;
 
-    public float maxGrowth = 5f;
-    public float growthRate = 1f;
-    public float shrinkRate = 0.5f;
-    public float timeToStarve = 10f;
-    private float currentGrowth = 0f;
+    public float maxGrowth;
+    public float growthRate;
+    public float shrinkRate;
+    public float timeToStarve;
+    private float currentGrowth;
     private float lastMealTime;
     private AudioSource playerSound;
 
@@ -113,7 +113,7 @@ public class FishController : MonoBehaviour
                 Transform spawnPoint = childSpawnPoints[Random.Range(0, childSpawnPoints.Length)];
 
                 // Instancia una nueva cría de pez en un punto de spawn
-                GameObject child = Instantiate(childPrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
+                GameObject child = Instantiate(childPrefab, spawnPoint.position, Quaternion.Euler(0,90,0), spawnPoint);
                 FishController childController = child.GetComponent<FishController>();
 
                 if (childController != null)
