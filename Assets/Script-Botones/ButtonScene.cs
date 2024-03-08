@@ -9,7 +9,7 @@ public class ButtonScene : MonoBehaviour
 {
     private bool isPause;
     [SerializeField] GameObject panelPause;
-
+    bool panelstate;
 
     public void LoadScene(string sceneName)
     {
@@ -36,6 +36,23 @@ public class ButtonScene : MonoBehaviour
         {
             Time.timeScale = 1;
             panelPause.SetActive(false);
+        }
+    }
+
+    public void CerrarInstrucciones(GameObject Panels)
+    {
+        panelstate = !panelstate;
+        if (panelstate)
+        {
+            
+                Panels.SetActive(true);
+            
+        }
+        else
+        {
+            
+                Panels.SetActive(false);
+            
         }
     }
 
