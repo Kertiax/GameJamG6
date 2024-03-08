@@ -8,24 +8,24 @@ public class ButtonSceneOf : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
     public void whenButtonCliked()
     {
-        if (square.activeInHierarchy == true)
+        if (square.activeInHierarchy == false)
         {
-            square.SetActive(false);
+            square.SetActive(true);
         }
         else
         {
-            square.SetActive(true);
+            square.SetActive(false);
         }
     }
 }
