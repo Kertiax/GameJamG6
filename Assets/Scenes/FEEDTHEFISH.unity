@@ -345,11 +345,11 @@ MonoBehaviour:
   - {fileID: 3080911419516523559, guid: 4e82853e23eaf644fbeb83934fc5f78f, type: 3}
   - {fileID: 9146241312807470097, guid: cd658962102bf834a8be169fc4970f3a, type: 3}
   - {fileID: 3229312922108426283, guid: 52bd09ffd0a4d23449409ebbc601170c, type: 3}
-  spawnInterval: 5
-  spawnRadius: 5
-  desiredZPosition: 3.8
+  spawnInterval: 2
+  spawnRadius: 2
+  desiredZPosition: 14
   foodLifetime: 10
-  spawnHeight: 20
+  spawnHeight: 5
 --- !u!114 &443355251
 MonoBehaviour:
   m_ObjectHideFlags: 0
