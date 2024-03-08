@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5897512338769358275}
   - component: {fileID: 5897512338769358274}
   - component: {fileID: 4825274122589405455}
+  - component: {fileID: -8132241269177563053}
   m_Layer: 0
   m_Name: creamHorn 1
-  m_TagString: Untagged
+  m_TagString: GoodFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,3 +132,16 @@ MonoBehaviour:
   foodType: 0
   growthAmount: 1
   fallSpeed: 0.01
+--- !u!114 &-8132241269177563053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6708469983465803918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bd403a39bf3314eacadd7cf8e7eed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodFoodSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}

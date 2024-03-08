@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hijo
+  - GoodFood
+  - BadFood
   layers:
   - Default
   - TransparentFX
