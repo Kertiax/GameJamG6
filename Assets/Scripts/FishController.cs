@@ -15,7 +15,7 @@ public class FishController : MonoBehaviour
     private AudioSource playerSound;
 
     public AudioClip swimSound;
-    public AudioClip soundThrow;
+    
 
     public GameObject[] fishPrefabs; // Lista de prefabs de peces
     private int childCount = 0;
