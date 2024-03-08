@@ -2,24 +2,19 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
+    public GameObject[] fishPrefabs; // Lista de prefabs de peces
+    private int childCount = 0;
+    public Transform[] childSpawnPoints; // Nuevos: Puntos de spawn para las crías
     public float moveSpeed;
     public float maxYPosition;
     public float minYPosition;
-
     public float maxGrowth;
     public float growthRate;
     public float shrinkRate;
     public float timeToStarve;
     private float currentGrowth;
     private float lastMealTime;
-    
-    
-  
 
-    public GameObject[] fishPrefabs; // Lista de prefabs de peces
-    private int childCount = 0;
-
-    public Transform[] childSpawnPoints; // Nuevos: Puntos de spawn para las crías
 
     private void Start()
     {
@@ -58,7 +53,7 @@ public class FishController : MonoBehaviour
         if (currentGrowth >= maxGrowth)
         {
             Grow();
-            if (++childCount % 5 == 0)
+            if (++childCount % 3 == 0)
             {
                 SpawnChild();
             }
@@ -77,6 +72,7 @@ public class FishController : MonoBehaviour
     private void Shrink()
     {
         transform.localScale = new Vector3(currentGrowth / maxGrowth, currentGrowth / maxGrowth, 1f);
+
     }
 
     private void HandleFeeding()
@@ -97,6 +93,7 @@ public class FishController : MonoBehaviour
             currentGrowth -= shrinkRate * Time.deltaTime;
             currentGrowth = Mathf.Clamp(currentGrowth, 0f, maxGrowth);
             Shrink();
+            
         }
     }
 
@@ -123,4 +120,5 @@ public class FishController : MonoBehaviour
             }
         }
     }
+
 }

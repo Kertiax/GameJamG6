@@ -1513,7 +1513,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 100
-  field of view: 63.679596
+  field of view: 58.69668
   orthographic: 0
   orthographic size: 7
   m_Depth: 0
@@ -2726,9 +2726,9 @@ MonoBehaviour:
   moveSpeed: 15
   maxYPosition: 5
   minYPosition: -5
-  maxGrowth: 10
+  maxGrowth: 5
   growthRate: 0.2
-  shrinkRate: 5
+  shrinkRate: 3
   timeToStarve: 7
   fishPrefabs:
   - {fileID: 7203397206375316406, guid: c9c477e02a7ec7c4385317d170d99350, type: 3}
