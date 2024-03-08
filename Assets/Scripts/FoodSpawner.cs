@@ -3,11 +3,11 @@ using UnityEngine;
 public class FoodSpawner : MonoBehaviour
 {
     public GameObject[] foodPrefabs;
-    public float spawnInterval = 5f;
-    public float spawnRadius = 5f;
-    public float desiredZPosition = 3.8f;
-    public float foodLifetime = 10f;
-    public float spawnHeight = 20f; // Nueva variable: altura desde la cual se tira la comida
+    public float spawnInterval;
+    public float spawnRadius;
+    public float desiredZPosition;
+    public float foodLifetime;
+    public float spawnHeight;
 
     private float timeSinceLastSpawn;
 
