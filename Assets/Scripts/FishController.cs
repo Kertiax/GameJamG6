@@ -12,9 +12,7 @@ public class FishController : MonoBehaviour
     public float timeToStarve;
     private float currentGrowth;
     private float lastMealTime;
-    private AudioSource playerSound;
-
-    public AudioClip swimSound;
+    
     
   
 
