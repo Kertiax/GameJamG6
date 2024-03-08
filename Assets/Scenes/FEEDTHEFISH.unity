@@ -2711,6 +2711,33 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: 0.08, z: 0}
+--- !u!114 &1830298701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554082527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920e093d60874174daf6c20a2ce1dbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 15
+  maxYPosition: 5
+  minYPosition: -5
+  maxGrowth: 10
+  growthRate: 0.2
+  shrinkRate: 5
+  timeToStarve: 7
+  fishPrefabs:
+  - {fileID: 7203397206375316406, guid: c9c477e02a7ec7c4385317d170d99350, type: 3}
+  - {fileID: 6708469983465803918, guid: 7ec167db780aedb48bcabfcb9e8b3f9a, type: 3}
+  - {fileID: 9053861883953509992, guid: 842d1c13a9765304a9b6a16cd40272ff, type: 3}
+  childSpawnPoints:
+  - {fileID: 1860137692}
+  - {fileID: 817630090}
+  - {fileID: 1643561115}
 --- !u!1 &1860137691
 GameObject:
   m_ObjectHideFlags: 0
