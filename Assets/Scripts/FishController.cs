@@ -26,7 +26,7 @@ public class FishController : MonoBehaviour
     private void Start()
     {
         lastMealTime = Time.time;
-        playerSound = GetComponent<AudioSource>();
+        
     }
 
     private void Update()
