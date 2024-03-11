@@ -35,13 +35,17 @@ public class FishController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 moveDirection = new Vector3(horizontalInput, verticalInput, 0f).normalized;
+        Vector3 moveDirection = new Vector3(horizontalInput, 
+            verticalInput, 0f).normalized;
 
         if (moveDirection.magnitude >= 0.1f)
         {
-            Vector3 newPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
-            newPosition.y = Mathf.Clamp(newPosition.y, minYPosition, maxYPosition);
-            transform.position = Vector3.Lerp(transform.position, newPosition, 0.5f);
+            Vector3 newPosition = transform.position + 
+                moveDirection * moveSpeed * Time.deltaTime;
+            newPosition.y = Mathf.Clamp(newPosition.y, 
+                minYPosition, maxYPosition);
+            transform.position = Vector3.Lerp(transform.
+                position, newPosition, 0.5f);
            
         }
     }
@@ -51,7 +55,7 @@ public class FishController : MonoBehaviour
         currentGrowth += amount;
         lastMealTime = Time.time;
 
-        if (currentGrowth >= maxGrowth)
+        if (currentGrowth <= maxGrowth)
         {
             Grow();
             if (++childCount % 3 == 0)
@@ -66,13 +70,15 @@ public class FishController : MonoBehaviour
         // Solo permite el crecimiento del pez principal si no tiene crías
         if (transform.childCount == 0)
         {
-            transform.localScale = new Vector3(currentGrowth / maxGrowth, currentGrowth / maxGrowth, 1f);
+            transform.localScale = new Vector3(currentGrowth / maxGrowth,
+                currentGrowth / maxGrowth, 1f);
         }
     }
 
     private void Shrink()
     {
-        transform.localScale = new Vector3(currentGrowth / maxGrowth, currentGrowth / maxGrowth, 1f);
+        transform.localScale = new Vector3(currentGrowth / maxGrowth,
+            currentGrowth / maxGrowth, 1f);
 
     }
 
@@ -96,7 +102,7 @@ public class FishController : MonoBehaviour
             Shrink();
             
         }
-        else if (currentGrowth <= 0) // Si el tiempo de inanición alcanza 0, activa el game over
+        else if (currentGrowth == 0) // Si el tiempo de inanición alcanza 0, activa el game over
         {
             
         }
@@ -106,21 +112,27 @@ public class FishController : MonoBehaviour
     {
         if (fishPrefabs.Length > 0 && childSpawnPoints.Length > 0)
         {
-            GameObject childPrefab = fishPrefabs[Random.Range(0, fishPrefabs.Length)];
+            GameObject childPrefab = fishPrefabs[Random.Range(0, 
+                fishPrefabs.Length)];
 
             if (childPrefab != null)
             {
                 // Selecciona aleatoriamente un punto de spawn para las crías
-                Transform spawnPoint = childSpawnPoints[Random.Range(0, childSpawnPoints.Length)];
+                Transform spawnPoint = childSpawnPoints[Random.Range(0, 
+                    childSpawnPoints.Length)];
 
                 // Instancia una nueva cría de pez en un punto de spawn
-                GameObject child = Instantiate(childPrefab, spawnPoint.position, Quaternion.Euler(0,90,0), spawnPoint);
-                FishController childController = child.GetComponent<FishController>();
+                GameObject child = Instantiate(childPrefab, 
+                    spawnPoint.position, Quaternion.Euler(0,90,0),
+                    spawnPoint);
+                FishController childController = 
+                    child.GetComponent<FishController>();
 
                 if (childController != null)
                 {
                     childController.childCount = 0;
-                    currentGrowth = 0; // Detiene el crecimiento del pez principal
+                    currentGrowth = 0; // Detiene el crecimiento
+                                       // del pez principal
                 }
             }
         }

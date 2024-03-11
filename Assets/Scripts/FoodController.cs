@@ -10,7 +10,7 @@ public enum FoodType
 public class FoodController : MonoBehaviour
 {
     public FoodType foodType = FoodType.Positive;
-    public float growthAmount = 1f;
+    public float growthAmount = 0.5f;
     public float fallSpeed = 2f; // Velocidad de caída
     public GameObject gOpanel;
 

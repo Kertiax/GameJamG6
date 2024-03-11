@@ -30,7 +30,9 @@ public class FoodSpawner : MonoBehaviour
         GameObject selectedFoodPrefab = foodPrefabs[Random.Range(0, foodPrefabs.Length)];
 
         // Calcula una posición aleatoria dentro del radio especificado y establece la altura y profundidad deseadas
-        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + spawnHeight, desiredZPosition) + Random.insideUnitSphere * spawnRadius;
+        Vector3 spawnPosition = new Vector3(transform.position.x, 
+            transform.position.y + spawnHeight, desiredZPosition) + 
+            Random.insideUnitSphere * spawnRadius;
         spawnPosition.z = desiredZPosition; // Mantiene la coordenada Z constante
 
         GameObject spawnedFood = Instantiate(selectedFoodPrefab, spawnPosition, Quaternion.identity);
