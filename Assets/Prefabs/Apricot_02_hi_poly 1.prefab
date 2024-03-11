@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 8013858986225272547}
   - component: {fileID: 8013858986225272544}
   - component: {fileID: -130810011583600366}
-  - component: {fileID: -4273225824339859166}
   m_Layer: 0
   m_Name: Apricot_02_hi_poly 1
   m_TagString: GoodFood
@@ -163,16 +162,3 @@ MonoBehaviour:
   foodType: 0
   growthAmount: 1
   fallSpeed: 0.01
---- !u!114 &-4273225824339859166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203397206375316406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54bd403a39bf3314eacadd7cf8e7eed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goodFoodSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UIElements;
 
 public enum FoodType
 {
@@ -10,7 +9,7 @@ public enum FoodType
 public class FoodController : MonoBehaviour
 {
     public FoodType foodType = FoodType.Positive;
-    public float growthAmount = 1f;
+    public float growthAmount = 1.5f;
     public float fallSpeed = 2f; // Velocidad de ca�da
 
     private void Start()
@@ -27,12 +26,14 @@ public class FoodController : MonoBehaviour
     private void Update()
     {
         // Simula la ca�da de la comida
-        transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.down * fallSpeed 
+            * Time.deltaTime, Space.World);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        FishController fishController = other.GetComponent<FishController>();
+        FishController fishController = 
+            other.GetComponent<FishController>();
 
         if (fishController != null)
         {
