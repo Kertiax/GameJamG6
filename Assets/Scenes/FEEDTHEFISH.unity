@@ -2710,20 +2710,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e093d60874174daf6c20a2ce1dbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefabs:
-  - {fileID: 2096399598751129101, guid: 4e9efca6149ff5f4c97c34f27764727e, type: 3}
-  gOpanel: {fileID: 560140211}
-  childSpawnPoints:
-  - {fileID: 1860137692}
-  - {fileID: 817630090}
-  - {fileID: 1643561115}
   moveSpeed: 15
   maxYPosition: 5
   minYPosition: -5
   maxGrowth: 5
-  growthRate: 1
-  shrinkRate: 5
-  timeToStarve: -5
+  growthRate: 0.5
+  shrinkRate: 0.5
+  timeToStarve: 5
+  fishPrefabs:
+  - {fileID: 2096399598751129101, guid: 4e9efca6149ff5f4c97c34f27764727e, type: 3}
+  childSpawnPoints:
+  - {fileID: 1860137692}
+  - {fileID: 817630090}
+  - {fileID: 1643561115}
 --- !u!1 &1860137691
 GameObject:
   m_ObjectHideFlags: 0
