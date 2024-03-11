@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UIElements;
 
 public enum FoodType
@@ -10,13 +10,12 @@ public enum FoodType
 public class FoodController : MonoBehaviour
 {
     public FoodType foodType = FoodType.Positive;
-    public float growthAmount = 0.5f;
-    public float fallSpeed = 2f; // Velocidad de caída
-    public GameObject gOpanel;
+    public float growthAmount = 1f;
+    public float fallSpeed = 2f; // Velocidad de caï¿½da
 
     private void Start()
     {
-        // Asegúrate de que la comida tenga un Rigidbody
+        // Asegï¿½rate de que la comida tenga un Rigidbody
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb == null)
         {
@@ -27,7 +26,7 @@ public class FoodController : MonoBehaviour
 
     private void Update()
     {
-        // Simula la caída de la comida
+        // Simula la caï¿½da de la comida
         transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
     }
 
@@ -40,8 +39,6 @@ public class FoodController : MonoBehaviour
             ApplyFoodEffect(fishController);
             Destroy(gameObject);
         }
-
-       
     }
 
     private void ApplyFoodEffect(FishController fishController)
@@ -53,10 +50,8 @@ public class FoodController : MonoBehaviour
                 break;
 
             case FoodType.Negative:
-                fishController.Feed(-growthAmount);              
+                fishController.Feed(-growthAmount);
                 break;
         }
     }
-
-
 }
