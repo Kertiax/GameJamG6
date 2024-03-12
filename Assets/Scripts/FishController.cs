@@ -7,14 +7,14 @@ public class FishController : MonoBehaviour
     private float lastMealTime, currentGrowth = 0f;
     public GameObject[] fishPrefabs; // Lista de prefabs de peces
     private int childCount = 0;
-    Ctrls Ctrls;
+   
     public GameObject menu;
     public Transform[] childSpawnPoints; // Nuevos: Puntos de spawn para las cr�as
 
     private void Start()
     {
         lastMealTime = Time.time;
-        Ctrls = GetComponent<Ctrls>();
+        
         
     }
 
