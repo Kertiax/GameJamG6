@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Ctrls : MonoBehaviour
 {
-   
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -19,9 +19,10 @@ public class Ctrls : MonoBehaviour
 
     public void SetPanels(bool panel)
     {
-        if (panel == false) 
+        if (panel == false)
         {
             gameObject.SetActive(true);
         }
     }
+
 }

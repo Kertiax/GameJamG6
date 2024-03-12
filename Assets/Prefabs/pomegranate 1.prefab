@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8170847729697835837}
   - component: {fileID: 8170847729697835834}
   - component: {fileID: 1927599143830929558}
+  - component: {fileID: 7865698844849423887}
   m_Layer: 0
   m_Name: pomegranate 1
   m_TagString: BadFood
@@ -130,3 +131,17 @@ MonoBehaviour:
   foodType: 1
   growthAmount: -5
   fallSpeed: 2
+--- !u!114 &7865698844849423887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053861883953509992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ecce0091fc0fc04995948e7f11bdf80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badFoodSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
+  goodFoodSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}

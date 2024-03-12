@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using UnityEditor.SearchService;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FishController : MonoBehaviour
 {
@@ -14,8 +16,6 @@ public class FishController : MonoBehaviour
     private void Start()
     {
         lastMealTime = Time.time;
-        
-        
     }
 
     private void Update()
@@ -30,16 +30,16 @@ public class FishController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 moveDirection = new Vector3(horizontalInput, 
+        Vector3 moveDirection = new Vector3(horizontalInput,
             verticalInput, 0f).normalized;
 
         if (moveDirection.magnitude >= 0.2f)
         {
-            Vector3 newPosition = transform.position + moveDirection 
+            Vector3 newPosition = transform.position + moveDirection
                 * moveSpeed * Time.deltaTime;
             newPosition.y = Mathf.Clamp(newPosition.y, minYPosition,
                 maxYPosition);
-            transform.position = Vector3.Lerp(transform.position, 
+            transform.position = Vector3.Lerp(transform.position,
                 newPosition, 0.5f);
         }
     }
@@ -71,7 +71,7 @@ public class FishController : MonoBehaviour
 
     private void Shrink()
     {
-        transform.localScale = new Vector3(currentGrowth 
+        transform.localScale = new Vector3(currentGrowth
             / maxGrowth, currentGrowth / maxGrowth, 1f);
     }
 
@@ -93,10 +93,11 @@ public class FishController : MonoBehaviour
             currentGrowth -= shrinkRate * Time.deltaTime;
             currentGrowth = Mathf.Clamp(currentGrowth, 0f, maxGrowth);
             Shrink();
-            if (currentGrowth < 0f)
+
+            if (currentGrowth == 0)
             {
                 Destroy(gameObject);
-                
+                SceneManager.LoadScene("GAMEOVER");
             }
         }
     }
@@ -105,7 +106,7 @@ public class FishController : MonoBehaviour
     {
         if (fishPrefabs.Length > 0 && childSpawnPoints.Length > 0)
         {
-            GameObject childPrefab = fishPrefabs[Random.Range(0, 
+            GameObject childPrefab = fishPrefabs[Random.Range(0,
                 fishPrefabs.Length)];
 
             if (childPrefab != null)
@@ -115,10 +116,10 @@ public class FishController : MonoBehaviour
                     Random.Range(0, childSpawnPoints.Length)];
 
                 // Instancia una nueva cr�a de pez en un punto de spawn
-                GameObject child = Instantiate(childPrefab, 
+                GameObject child = Instantiate(childPrefab,
                     spawnPoint.position,
-                    Quaternion.Euler(0,90,0), spawnPoint);
-                FishController childController = 
+                    Quaternion.Euler(0, 90, 0), spawnPoint);
+                FishController childController =
                     child.GetComponent<FishController>();
 
                 if (childController != null)
@@ -129,8 +130,4 @@ public class FishController : MonoBehaviour
             }
         }
     }
-
-
-
-
 }
